@@ -10,14 +10,19 @@ type State = {
 };
 
 type Actions = {
-  increment: (v: number) => void;
-  decrement: (v: number) => void;
+  incrementCount: (v: number) => void;
+  decrementCount: (v: number) => void;
 };
 
-export const useCounter = create<State & Actions>((set) => ({
+export const useStore = create<State & Actions>((set) => ({
   count: 0,
-  increment: (value) => set((state) => ({ count: state.count + value })),
-  decrement: (value) => set((state) => ({ count: state.count - value })),
+  incrementCount: (value) => set((state) => ({ count: state.count + value })),
+  decrementCount: (value) =>
+    set((state) => {
+      if (state.count == 0) return state;
+
+      return { count: state.count - value };
+    }),
 }));
 
 const rootElement = document.getElementById("root");
