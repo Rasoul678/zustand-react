@@ -1,25 +1,25 @@
 import "./App.css";
-import reactLogo from "./assets/react.svg";
-import Counter from "./components/Counter";
-import ShowStateKeys from "./components/ShowNames";
+import reactLogo from "/react.svg";
 import viteLogo from "/vite.svg";
+import zustandLogo from "/zustand.svg";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo vite" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+        <a href="https://zustand-demo.pmnd.rs" target="_blank">
+          <img src={zustandLogo} className="logo zustand" alt="Zustand logo" />
+        </a>
       </div>
-      <h1>Vite + React</h1>
-      <Counter />
-      <ShowStateKeys />
-    </>
+      <h1>Vite + React + Zustand</h1>
+    </div>
   );
-}
+};
 
 export default App;

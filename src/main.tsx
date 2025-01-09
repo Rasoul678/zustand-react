@@ -1,35 +1,26 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App.tsx";
 import "./index.css";
 
-import { create } from "zustand";
-
-type State = {
-  count: number;
-};
-
-type Actions = {
-  incrementCount: (v: number) => void;
-  decrementCount: (v: number) => void;
-};
-
-export const useStore = create<State & Actions>((set) => ({
-  count: 0,
-  incrementCount: (value) => set((state) => ({ count: state.count + value })),
-  decrementCount: (value) =>
-    set((state) => {
-      if (state.count == 0) return state;
-
-      return { count: state.count - value };
-    }),
-}));
+import Counter from "./components/counter/Counter.tsx";
+import AppLayout from "./components/layout/AppLayout.tsx";
+import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement!);
 
 root.render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<App />} />
+          <Route path="counter" element={<Counter />} />
+          <Route path="use-shallow" element={<ShowStateKeys />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 );
