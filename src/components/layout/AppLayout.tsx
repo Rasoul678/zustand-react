@@ -16,8 +16,9 @@ const AppLayout: React.FC<IProps> = () => {
             alt="Zustand logo"
           />
         </NavLink>
-        <NavLink to="/counter">Counter</NavLink>
+        <NavLink to="/counter">counter</NavLink>
         <NavLink to="/use-shallow">useShallow</NavLink>
+        <NavLink to="/combine">combine</NavLink>
       </nav>
       <Outlet />
     </main>

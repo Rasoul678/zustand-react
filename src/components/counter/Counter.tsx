@@ -34,6 +34,7 @@ const Counter: React.FC<IProps> = () => {
 
   return (
     <>
+      <h1>good old counter</h1>
       <div className="card">
         <button onClick={() => decrementCount(1)}>-</button>
         <button>count is {count}</button>

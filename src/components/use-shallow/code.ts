@@ -6,24 +6,24 @@ export const code = `
     type IProps = {};
 
     type State = {
-    names: String[];
+        names: String[];
     };
 
     type Actions = {
-    setNames: (v: String[]) => void;
+        setNames: (v: String[]) => void;
     };
 
     const useStore = create<State & Actions>((set) => ({
-    names: [],
-    setNames: (names) => set({ names }),
+        names: [],
+        setNames: (names) => set({ names }),
     }));
 
     const ShowStateKeys: React.FC<IProps> = () => {
-    const names = useStore(useShallow((state) => Object.keys(state)));
+        const names = useStore(useShallow((state) => Object.keys(state)));
 
-    return (
-        <div className="card">{names.join(", ")}</div>
-    );
+        return (
+            <div className="card">{names.join(", ")}</div>
+        );
     };
 
     export default ShowStateKeys;
