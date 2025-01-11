@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App.tsx";
 import "./index.css";
 
+import AutoGenerateSelector from "./components/auto-generate_selector/AutoGenerateSelector.tsx";
 import Counter from "./components/counter/Counter.tsx";
 import AppLayout from "./components/layout/AppLayout.tsx";
 import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
@@ -21,6 +22,7 @@ root.render(
           <Route path="counter" element={<Counter />} />
           <Route path="use-shallow" element={<ShowStateKeys />} />
           <Route path="combine" element={<WithCombine />} />
+          <Route path="auto-selector" element={<AutoGenerateSelector />} />
         </Route>
       </Routes>
     </BrowserRouter>

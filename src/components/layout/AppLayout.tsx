@@ -19,6 +19,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/counter">counter</NavLink>
         <NavLink to="/use-shallow">useShallow</NavLink>
         <NavLink to="/combine">combine</NavLink>
+        <NavLink to="/auto-selector">auto selector</NavLink>
       </nav>
       <Outlet />
     </main>
