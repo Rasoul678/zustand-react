@@ -20,6 +20,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/use-shallow">useShallow</NavLink>
         <NavLink to="/combine">combine</NavLink>
         <NavLink to="/auto-selector">auto selector</NavLink>
+        <NavLink to="/with-url-hash">with url hash</NavLink>
       </nav>
       <Outlet />
     </main>

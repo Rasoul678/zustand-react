@@ -9,6 +9,7 @@ import Counter from "./components/counter/Counter.tsx";
 import AppLayout from "./components/layout/AppLayout.tsx";
 import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
 import WithCombine from "./components/with-combine/WithCombine.tsx";
+import WithUrlHash from "./components/with-url-hash/WithUrlHash.tsx";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement!);
@@ -23,6 +24,7 @@ root.render(
           <Route path="use-shallow" element={<ShowStateKeys />} />
           <Route path="combine" element={<WithCombine />} />
           <Route path="auto-selector" element={<AutoGenerateSelector />} />
+          <Route path="with-url-hash" element={<WithUrlHash />} />
         </Route>
       </Routes>
     </BrowserRouter>

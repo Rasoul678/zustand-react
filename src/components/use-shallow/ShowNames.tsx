@@ -26,7 +26,7 @@ const ShowStateKeys: React.FC<IProps> = () => {
 
   return (
     <>
-      <h1>useShallow</h1>
+      <h1>With 'useShallow' hook</h1>
       <div className="card">{names.join(", ")}</div>
       <pre>
         <code className="language-typescript">{code}</code>

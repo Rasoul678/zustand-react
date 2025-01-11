@@ -22,7 +22,10 @@ export const code = `
         const names = useStore(useShallow((state) => Object.keys(state)));
 
         return (
-            <div className="card">{names.join(", ")}</div>
+            <>
+                <h1>With 'useShallow' hook</h1>
+                <div className="card">{names.join(", ")}</div>
+            <>
         );
     };
 

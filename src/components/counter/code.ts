@@ -30,11 +30,14 @@ export const code = `
       );
     
       return (
-        <div className="card">
-            <button onClick={() => decrementCount(1)}>-</button>
-            <button>count is {count}</button>
-            <button onClick={() => incrementCount(1)}>+</button>
-        </div>
+        <>
+          <h1>Good Old Counter</h1>
+          <div className="card">
+              <button onClick={() => decrementCount(1)}>-</button>
+              <button>count is {count}</button>
+              <button onClick={() => incrementCount(1)}>+</button>
+          </div>
+        </>
       );
     };
     
