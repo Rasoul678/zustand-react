@@ -6,6 +6,7 @@ import "./index.css";
 
 import AutoGenerateSelector from "./components/auto-generate_selector/AutoGenerateSelector.tsx";
 import Counter from "./components/counter/Counter.tsx";
+import InitWithProps from "./components/init-with-props/InitWithProps.tsx";
 import AppLayout from "./components/layout/AppLayout.tsx";
 import ResetState from "./components/reset-state/ResetState.tsx";
 import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
@@ -27,6 +28,7 @@ root.render(
           <Route path="auto-selector" element={<AutoGenerateSelector />} />
           <Route path="with-url-hash" element={<WithUrlHash />} />
           <Route path="reset-state" element={<ResetState />} />
+          <Route path="init-with-props" element={<InitWithProps />} />
         </Route>
       </Routes>
     </BrowserRouter>
