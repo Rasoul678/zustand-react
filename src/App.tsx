@@ -1,9 +1,13 @@
+import { code } from "./App.code";
 import "./App.css";
+import { usePrism } from "./hooks/usePrism";
 import reactLogo from "/react.svg";
 import viteLogo from "/vite.svg";
 import zustandLogo from "/zustand.svg";
 
 const App = () => {
+  usePrism();
+
   return (
     <div>
       <div>
@@ -18,6 +22,9 @@ const App = () => {
         </a>
       </div>
       <h1>Vite + React + Zustand</h1>
+      <pre>
+        <code className="language-typescript">{code}</code>
+      </pre>
     </div>
   );
 };

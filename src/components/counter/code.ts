@@ -13,7 +13,7 @@ export const code = `
       decrementCount: (v: number) => void;
     };
     
-    const useCounter = create<State & Actions>((set) => ({
+    const useCounter = create<State & Actions>()((set) => ({
       count: 0,
       incrementCount: (value) => set((state) => ({ count: state.count + value })),
       decrementCount: (value) =>

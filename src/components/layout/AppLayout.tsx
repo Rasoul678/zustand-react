@@ -21,6 +21,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/combine">combine</NavLink>
         <NavLink to="/auto-selector">auto selector</NavLink>
         <NavLink to="/with-url-hash">with url hash</NavLink>
+        <NavLink to="/reset-state">reset state</NavLink>
       </nav>
       <Outlet />
     </main>
