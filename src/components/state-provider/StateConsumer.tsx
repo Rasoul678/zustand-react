@@ -1,23 +1,19 @@
 import React from "react";
-import { useStore } from "zustand";
 import { usePrism } from "../../hooks/usePrism";
-import { BearContext } from "./InitWithProps";
 import { code } from "./code";
+import { useBearContext } from "./useBearContext";
 
 type IProps = {};
 
 const StateConsumer: React.FC<IProps> = () => {
-  const store = React.useContext(BearContext);
-  if (!store) throw new Error("Missing BearContext.Provider in the tree");
-
-  const bears = useStore(store, (s) => s.bears);
-  const addBear = useStore(store, (s) => s.addBear);
+  const bears = useBearContext((s) => s.bears);
+  const addBear = useBearContext((s) => s.addBear);
 
   usePrism();
 
   return (
     <>
-      <h1>Initialize State With Props</h1>
+      <h1>State Provider Pattern</h1>
       <div className="card">
         <button>Value: {bears}</button>
         <button onClick={addBear}>Add bear</button>

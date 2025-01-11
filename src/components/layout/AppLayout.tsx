@@ -23,6 +23,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/with-url-hash">with url hash</NavLink>
         <NavLink to="/reset-state">reset state</NavLink>
         <NavLink to="/init-with-props">init with props</NavLink>
+        <NavLink to="/provider-pattern">provider pattern</NavLink>
       </nav>
       <Outlet />
     </main>

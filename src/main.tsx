@@ -9,6 +9,7 @@ import Counter from "./components/counter/Counter.tsx";
 import InitWithProps from "./components/init-with-props/InitWithProps.tsx";
 import AppLayout from "./components/layout/AppLayout.tsx";
 import ResetState from "./components/reset-state/ResetState.tsx";
+import StateProvider from "./components/state-provider/StateProvider.tsx";
 import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
 import WithCombine from "./components/with-combine/WithCombine.tsx";
 import WithUrlHash from "./components/with-url-hash/WithUrlHash.tsx";
@@ -28,7 +29,14 @@ root.render(
           <Route path="auto-selector" element={<AutoGenerateSelector />} />
           <Route path="with-url-hash" element={<WithUrlHash />} />
           <Route path="reset-state" element={<ResetState />} />
-          <Route path="init-with-props" element={<InitWithProps />} />
+          <Route
+            path="init-with-props"
+            element={<InitWithProps bears={10} />}
+          />
+          <Route
+            path="provider-pattern"
+            element={<StateProvider bears={60} />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
