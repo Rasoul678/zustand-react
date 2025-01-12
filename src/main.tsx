@@ -22,7 +22,7 @@ const root = createRoot(rootElement!);
 
 root.render(
   <StrictMode>
-    <BrowserRouter basename="/zustand-react">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<App />} />
