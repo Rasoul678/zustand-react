@@ -24,6 +24,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/reset-state">reset state</NavLink>
         <NavLink to="/init-with-props">init with props</NavLink>
         <NavLink to="/provider-pattern">provider pattern</NavLink>
+        <NavLink to="/redux-like-pattern">Redux-like pattern</NavLink>
       </nav>
       <Outlet />
     </main>

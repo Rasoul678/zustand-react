@@ -21,7 +21,7 @@ const App = () => {
           <img src={zustandLogo} className="logo zustand" alt="Zustand logo" />
         </a>
       </div>
-      <h1>Vite + React + Zustand</h1>
+      <h1>Vite(v6.0.5) + React(v18.3.1) + Zustand(v5.0.3)</h1>
       <pre>
         <code className="language-typescript">{code}</code>
       </pre>

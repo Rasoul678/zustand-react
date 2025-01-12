@@ -8,6 +8,7 @@ import AutoGenerateSelector from "./components/auto-generate_selector/AutoGenera
 import Counter from "./components/counter/Counter.tsx";
 import InitWithProps from "./components/init-with-props/InitWithProps.tsx";
 import AppLayout from "./components/layout/AppLayout.tsx";
+import ReduxLikePattern from "./components/redux-like-pattern/ReduxLikePattern.tsx";
 import ResetState from "./components/reset-state/ResetState.tsx";
 import StateProvider from "./components/state-provider/StateProvider.tsx";
 import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
@@ -37,6 +38,7 @@ root.render(
             path="provider-pattern"
             element={<StateProvider bears={60} />}
           />
+          <Route path="redux-like-pattern" element={<ReduxLikePattern />} />
         </Route>
       </Routes>
     </BrowserRouter>
