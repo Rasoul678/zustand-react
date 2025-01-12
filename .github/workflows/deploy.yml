@@ -24,6 +24,22 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Create 404.html
+        run: |
+          echo '<!DOCTYPE html>
+          <html>
+            <head>
+              <script>
+                const segment = 1;
+                const path = window.location.pathname.split("/").slice(segment).join("/");
+                window.location.href = `/${path}`;
+              </script>
+            </head>
+            <body>
+              <p>Redirecting...</p>
+            </body>
+          </html>' > dist/404.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
