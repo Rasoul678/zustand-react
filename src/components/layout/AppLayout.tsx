@@ -26,6 +26,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/init-with-props">init with props</NavLink>
         <NavLink to="/provider-pattern">provider pattern</NavLink>
         <NavLink to="/redux-like-pattern">Redux-like pattern</NavLink>
+        <NavLink to="/slice-pattern">Slice pattern</NavLink>
       </nav>
       <Outlet />
     </main>

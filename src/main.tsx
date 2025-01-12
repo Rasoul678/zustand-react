@@ -11,6 +11,7 @@ import AppLayout from "./components/layout/AppLayout.tsx";
 import PersistStateURL from "./components/persist-state-with-url/PersistStateURL.tsx";
 import ReduxLikePattern from "./components/redux-like-pattern/ReduxLikePattern.tsx";
 import ResetState from "./components/reset-state/ResetState.tsx";
+import SlicePattern from "./components/slice-pattern/SlicePattern.tsx";
 import StateProvider from "./components/state-provider/StateProvider.tsx";
 import ShowStateKeys from "./components/use-shallow/ShowNames.tsx";
 import WithCombine from "./components/with-combine/WithCombine.tsx";
@@ -41,6 +42,7 @@ root.render(
             element={<StateProvider bears={60} />}
           />
           <Route path="redux-like-pattern" element={<ReduxLikePattern />} />
+          <Route path="slice-pattern" element={<SlicePattern />} />
         </Route>
       </Routes>
     </BrowserRouter>
