@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const segment = 1;
+      const path = window.location.pathname.split("/").slice(segment).join("/");
+      window.location.href = `/${path}`;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
