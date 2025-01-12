@@ -21,6 +21,7 @@ const AppLayout: React.FC<IProps> = () => {
         <NavLink to="/combine">combine</NavLink>
         <NavLink to="/auto-selector">auto selector</NavLink>
         <NavLink to="/with-url-hash">with url hash</NavLink>
+        <NavLink to="/persist-url-search">persist url search</NavLink>
         <NavLink to="/reset-state">reset state</NavLink>
         <NavLink to="/init-with-props">init with props</NavLink>
         <NavLink to="/provider-pattern">provider pattern</NavLink>
